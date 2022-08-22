@@ -61,7 +61,7 @@ namespace IdentityServer
                     RequireConsent = false,
 
                     // where to redirect to after login
-                    RedirectUris = { "http://localhost:8080/callback.html" },
+                    RedirectUris = { "http://localhost:3000/api/auth/callback/demo-identity-server" },
 
                     // where to redirect to after logout
                     PostLogoutRedirectUris = { "http://localhost:8080/index.html" },

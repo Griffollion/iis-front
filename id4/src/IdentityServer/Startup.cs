@@ -34,7 +34,7 @@ namespace IdentityServer
                 {
                     policy.AllowAnyHeader();
                     policy.AllowAnyMethod();
-                    policy.WithOrigins("http://localhost:8082", "http://localhost:8080");
+                    policy.WithOrigins("http://localhost:8082", "http://localhost:8080", "http://localhost:3000");
                     policy.AllowCredentials();
                 });
             });
@@ -44,7 +44,7 @@ namespace IdentityServer
 
             var builder = services.AddIdentityServer(options =>
             {
-                options.UserInteraction.LoginUrl = "http://localhost:8082/index.html";
+                options.UserInteraction.LoginUrl = "http://localhost:3000/log";
                 options.UserInteraction.ErrorUrl = "http://localhost:8082/error.html";
                 options.UserInteraction.LogoutUrl = "http://localhost:8082/logout.html";
 
